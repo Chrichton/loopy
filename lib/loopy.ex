@@ -1,4 +1,7 @@
 defmodule Loopy do
+  @callback work() :: :ok
+  @callback wait() :: :ok
+
   def run(module) do
     spawn(fn -> loop(module) end)
   end
