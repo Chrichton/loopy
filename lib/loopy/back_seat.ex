@@ -1,4 +1,4 @@
-defmodule Loopy.Song do
+defmodule Loopy.BackSeat do
   @behaviour Loopy
 
   def go() do
@@ -7,11 +7,13 @@ defmodule Loopy.Song do
 
   @impl true
   def work() do
-    IO.puts("One more song")
+    IO.puts("back seat")
   end
 
   @impl true
   def wait() do
-    Process.sleep(300)
+    5_000
+    |> :rand.uniform()
+    |> Process.sleep()
   end
 end

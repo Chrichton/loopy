@@ -3,6 +3,6 @@ defmodule LoopyTest do
   doctest Loopy
 
   test "greets the world" do
-    assert Loopy.hello() == :world
+    assert Loopy.work(Loopy.BackSeat) == Loopy.BackSeat
   end
 end
